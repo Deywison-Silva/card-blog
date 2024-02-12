@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4d04e;
+    min-height: 100vh;
+    font-family: 'figtree', 'sans-serif';
+    display: grid;
+    place-content: center;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.card{
+    background-color: #ffffff;
+    max-width: 400px;
+    padding: 24px;
+    margin: 16px;
+    position: relative;
+    border-radius: 16px;
+    outline: 1px solid #000;
+}
+
+.card::before{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.card img{
+    border-radius: 16px;
+}
+
+.card .learning{
+    background-color: #f4d04e;
+    width: min-content;
+    padding: 8px;
+    margin-top: 24px;
+    font-weight: 800;
+    border-radius: 8px;
+}
+
+.card .data{
+    margin-top: 16px;
+}
+
+.card h1{
+    margin: 16px 0;
+}
+
+.card h1 a{
+    color: #121212;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.card h1 a:hover{
+    color: #f4d04e;
+}
+
+.card .descricao{
+    color: #808080;
+    line-height: 16px;
+}
+
+.card .autor{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card .autor img{
+    width: 30px;
+}
+
+.card .autor .name{
+    font-weight: 800;
+}
+
+@media (max-width: 175px) {
+    .card h1 a {
+        font-size: 20px;
+    }
+}
